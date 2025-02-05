@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('1.jpg.webp');
+    background-size: cover;
+    background-position: center;
+}
+.wrapper{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 110, 255, 0.445);
+    backdrop-filter: blur(30px);
+    box-shadow: black;
+    border-radius: 15px;
+}
+form h2{
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.8px;
+}
+.input-group{
+    position: relative;
+    margin: 35px auto 0;
+    width: 320px;   
+}
+.input-group input{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    color: aliceblue;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+}
+.input-group label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    pointer-events: none;
+    transition: all 0.56s ease;
+}
+.input-group input:focus ~ label,
+.input-group input:valid ~ label{
+    top: -20px;
+    font-size: 14px;
+    color: aliceblue;
+}
+.check label{
+    position: relative;
+    margin: 20px 0;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.check label input{
+    position: absolute;
+    appearance: none;
+    left: 0;
+}
+.check label input::before{
+    content:'';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    background: rgba(174, 0, 255, 0);
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.check label input:checked::before{
+    content: '\2714';
+    background-color: blueviolet;
+}
+.check label span{
+    padding-left: 7px;
+}
+form button{
+    width: 100%;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: blueviolet;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5 ease;
+}
+form button:hover{
+    background-color: blueviolet;
+
+}
+.signin{
+    margin-top: 20px;
+    text-align: center;
+}
+.signin p{
+    color: white;
+    font-size: 14px;
+}
+.signin p a{
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;    
+}
+.signin p a:hover{
+    text-decoration: underline;
+    opacity: 0.8;
+}
